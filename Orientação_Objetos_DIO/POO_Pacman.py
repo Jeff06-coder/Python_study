@@ -1,5 +1,6 @@
 # Definição da classe FantasmaPacman que é a Class mãe
 class FantasmaPacman:
+    #Atributos da classe
     def __init__(self, nome, cor, movimentacao):
         self.nome = nome
         self.cor = cor
