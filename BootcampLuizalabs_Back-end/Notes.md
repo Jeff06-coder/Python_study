@@ -89,3 +89,21 @@ Remova a chave ou volta o valor informado se não houver a chave ({})
 Remove items in order
 
 ### your_dict.setdefaoult("KeyName", "Value")
+To add if it does not exist, if it exists returns the value that is there
+
+(Para adicionar se não existir, se existir retorna o valor que está aí)
+
+### y_dict.update({"KeyName_or_newKeyName": {"new_key": "new_value"}})
+Update existing data based on what you enter (Atualize os dados existentes de acordo com o que você insere)
+
+### y_d.values()
+Return only values
+
+### foud = "what_do_you_want" in your_dict[NameKey_to_search]
+Checking if you have the key you want in the dictionary with "in"
+
+(Verificando se você tem a chave desejada no dicionário com "in")
+
+### del your_dict["nameKey"]["phone"]
+Remove the values or key placed
+

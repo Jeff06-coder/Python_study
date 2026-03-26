@@ -33,5 +33,25 @@ print(contatos.popitem())
 
 print("----------------")
 
-print(contatos.setdefault("idade", 30))
+print(contatos.setdefault("idade", [30, 55, 22, 31, 18]))
 # O método setdefault() retorna o valor da chave se ela existir, caso contrário, insere a chave com o valor padrão fornecido e retorna esse valor
+
+print("----------------")
+
+print(copy)
+copy.update({"messi@exemplo.com": {'nome': 'Messi', 'telefone': '911654321'}})
+print(copy)
+# O método update() atualiza o dicionário com os pares chave-valor de outro dicionário, sobrescrevendo os valores existentes para as chaves correspondentes
+
+print("----------------")
+
+print(contatos)
+search = 30 in contatos["idade"]
+print(search)
+# Verificando se o valor 30 está presente no valor associado à chave "idade"
+
+print("----------------")
+
+del contatos["idade"][0]
+print(contatos)
+# O comando del é usado para remover um item específico
