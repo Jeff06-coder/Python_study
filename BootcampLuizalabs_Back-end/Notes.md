@@ -107,3 +107,19 @@ Checking if you have the key you want in the dictionary with "in"
 ### del your_dict["nameKey"]["phone"]
 Remove the values or key placed
 
+### .item()
+Take the key and value together and make tuples of them like this
+
+(Junte a chave e o valor e faça tuplas deles assim)
+
+## Functions
+
+### def function (*args, **kwargs)
+args = Receives several values ​​and transforms them into tuples (Recebe vários valores e transforma em tuplas)
+
+kwargs = Receives several values ​​and transforms them into dictionaries (key: value) (Recebe vários valoes e tranforma em dicionários (chave : valor))
+
+### def sep_function (name, date, /, year_old, job)
+A / separates in the function which values ​​are received by position and which ones have to be named
+
+(A / separa na função quais valores são recebidos por posição e quais devem ser nomeados)
