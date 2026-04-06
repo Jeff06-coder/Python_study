@@ -60,6 +60,8 @@ class Bank:
         for account in self.accounts:
             if account.number == number:
                 return account
+            elif account.number != number:
+                return "Conta invalida!"
         return None
 
 # Criando a classe user para armazenar as informações
