@@ -61,16 +61,22 @@ It is the value of a list that cannot be changed
 ## Dictionary
 
 ### pessoa {"Key": "value"} | or | pessoa = dict(key="value")
-Both forms create the dictionary (Ambas formas criam o dicionário)
+Both forms create the dictionary 
+
+(Ambas formas criam o dicionário)
 
 ### pessoa["Add_NewKey"] = "Add_NewValue"
 Add new value to dictionary
 
 ### copy = pessoa.copy()
-Exactly copies the dictionary, but being another (Copia exatamente o dicionario, mas sendo outro)
+Exactly copies the dictionary, but being another 
+
+(Copia exatamente o dicionario, mas sendo outro)
 
 ### dict.fromkeys(["a", "b", "c"], 0) | dict.fromkeys(["abc", "valor"]) # 0 | # None
-Sets the value for everyone in the dictionary (Define o valor para todos no dicionário) 
+Sets the value for everyone in the dictionary 
+
+(Define o valor para todos no dicionário) 
 
 ### your_dict.get("KeyName")
 Returns the key value or None if it finds nothing (you can enter a value for it to return if it finds nothing)
@@ -94,7 +100,9 @@ To add if it does not exist, if it exists returns the value that is there
 (Para adicionar se não existir, se existir retorna o valor que está aí)
 
 ### y_dict.update({"KeyName_or_newKeyName": {"new_key": "new_value"}})
-Update existing data based on what you enter (Atualize os dados existentes de acordo com o que você insere)
+Update existing data based on what you enter 
+
+(Atualize os dados existentes de acordo com o que você insere)
 
 ### y_d.values()
 Return only values
@@ -115,11 +123,23 @@ Take the key and value together and make tuples of them like this
 ## Functions
 
 ### def function (*args, **kwargs)
-args = Receives several values ​​and transforms them into tuples (Recebe vários valores e transforma em tuplas)
+args = Receives several values ​​and transforms them into tuples 
 
-kwargs = Receives several values ​​and transforms them into dictionaries (key: value) (Recebe vários valoes e tranforma em dicionários (chave : valor))
+(Recebe vários valores e transforma em tuplas)
+
+kwargs = Receives several values ​​and transforms them into dictionaries (key: value) 
+
+(Recebe vários valoes e tranforma em dicionários (chave : valor))
 
 ### def sep_function (name, date, /, year_old, job)
 A / separates in the function which values ​​are received by position and which ones have to be named
 
 (A / separa na função quais valores são recebidos por posição e quais devem ser nomeados)
+
+## Decorators
+
+### def mensagem_para_guilherme(function_mensager)
+        return function_mensager("Guilherme")
+This function returns a function and can be used within another function, the data generated from the result of this function will serve as a parameter for the other that uses it.
+
+(Esta função retorna uma função e pode ser utilizada dentro de outra função, os dados gerados a partir do resultado desta função servirão de parâmetro para a outra que a utiliza.)
