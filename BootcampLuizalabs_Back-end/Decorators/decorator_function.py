@@ -9,7 +9,6 @@ def meu_decorador(funcao):
 def minha_funcao():
     print("Esta é a minha função.")
 
-minha_funcao()
 
 decorated_function = meu_decorador(minha_funcao)
 decorated_function()
