@@ -143,3 +143,12 @@ A / separates in the function which values ​​are received by position and wh
 This function returns a function and can be used within another function, the data generated from the result of this function will serve as a parameter for the other that uses it.
 
 (Esta função retorna uma função e pode ser utilizada dentro de outra função, os dados gerados a partir do resultado desta função servirão de parâmetro para a outra que a utiliza.)
+
+## Iteradores
+It is to make a class that reads lists and performs methods using __iter__ and __next__, so that to transform the data into an object, read the next item and only load the data for each pass and then discard it, this is improved in the use of RAM, used for very complex calculations and for reuse.
+
+(É fazer uma class que leia listas e realiza métodos utilizando __iter__ e __next__, para que o for transforme o dado em objeto, leia o próximo item e só carrega o dado por cada passagem e depois descarta, isso melhora na utilização da RAM, usado para calculos muito complexos e para reutilizações.)
+
+The *Generator* is a type of Interator, but simpler and for simpler actions. It carries out the process, capturing the result, delivering it and automatically deleting it when it moves on to the next step.
+
+(O *Gerador* é um tipo de Interador, só que mais simples e para ações mais simples. Ele faz o processo, capitando o resultado, entregando e automaticamente deletando ele quando passa para o próximo passo.)
