@@ -20,7 +20,7 @@ class ContaIterador:
             # Move o contador para a próxima posição
             self._index += 1
             # Entrega a conta e diz: "Aqui está, pode usar!"
-            return f"{conta.agencia} | {conta.numero} | {conta.cliente.nome} | Saldo: R$ {conta.saldo:.2f}"
+            return f"{conta.agencia} | {conta.numero_conta} | {conta.cliente.nome} | Saldo: R$ {conta.saldo:.2f}"
         
         # Se o contador passou do fim da lista, a gente avisa: "Acabou o baralho!"
         raise StopIteration
@@ -51,6 +51,12 @@ class Conta:
         self.cliente = cliente
         self.saldo = 0
         self.historico = Historico()
+        self.agencia = "0001"
+
+        @property
+        def agencia(self):
+            return self._agencia
+        
 
     # Validando operações de saque e depósito para evitar saldo negativo e depósitos inválidos
     
@@ -78,8 +84,8 @@ class ContaCorrente(Conta):
         self.limite_saldo = limite_saldo
 
     @classmethod
-    def nova_conta(cls, cliente, numero_conta, limite_saque=3, limite_saldo=0): # <--- Veja se o nome aqui é 'nova_conta'
-        return cls(cliente, numero_conta, limite_saque=limite_saque, limite_saldo=limite_saldo)
+    def nova_conta(cls, numero_conta, cliente, limite_saque=3, limite_saldo=0): # <--- Veja se o nome aqui é 'nova_conta'
+        return cls(numero_conta, cliente, limite_saque=limite_saque, limite_saldo=limite_saldo)
 
 # Ciado o armazenamento em list array para guardar os extratos
 class Historico:
@@ -129,6 +135,13 @@ class Transacao(ABC):
         pass
 
 class Saque(Transacao):
+    def __init__(self, valor):
+        self._valor = valor
+
+    @property
+    def valor(self):
+        return self._valor
+    
     def registrar(self, conta):
         # O Saque PERGUNTA para a conta se pode descontar
         # A LÓGICA de subtrair e a MENSAGEM DE ERRO estão dentro de conta.sacar
@@ -141,9 +154,16 @@ class Saque(Transacao):
         return False
 
 class Deposito(Transacao):
+    def __init__(self, valor):
+        self._valor = valor
+
+    @property
+    def valor(self):
+        return self._valor
+    
     def registrar(self, conta):
         # O Depósito PERGUNTA para a conta se pode adicionar
-        # A LÓGICA de adicionar e a MENSAGEM DE ERRO estão dentro de conta.depositar
+        # A LÓGICA de somar e a MENSAGEM DE ERRO estão dentro de conta.depositar
         sucesso_da_operacao = conta.depositar(self.valor)
 
         # O Depósito só se preocupa com uma coisa: Se deu certo, eu anoto.
@@ -297,7 +317,7 @@ def criar_conta(numero_conta, clientes, contas):
 
 def listar_contas(contas):
     
-    for conta in contas:
+    for conta in ContaIterador(contas):
         print("=" * 100)
         print(textwrap.dedent(str(conta)))
 
