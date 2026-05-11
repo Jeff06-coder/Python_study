@@ -1,0 +1,9 @@
+[20260511 11: 50: 22] Função 'criar_cliente' executada com argumentos ([<__main__.PessoaFisica object at 0x000001F160B89160>],) e {}. Retornou None
+[20260511 11: 51: 13] Função 'criar_conta' executada com argumentos (1, [<__main__.PessoaFisica object at 0x000001F160B89160>], [<ContaCorrente: ('0001', '1', '<__main__.PessoaFisica object at 0x000001F160B89160>')]) e {}. Retornou None
+[20260511 11: 51: 54] Função 'depositar' executada com argumentos ([<__main__.PessoaFisica object at 0x000001F160B89160>],) e {}. Retornou None
+[20260511 11: 52: 07] Função 'sacar' executada com argumentos ([<__main__.PessoaFisica object at 0x000001F160B89160>],) e {}. Retornou None
+[20260511 11: 52: 20] Função 'extrato' executada com argumentos ([<__main__.PessoaFisica object at 0x000001F160B89160>],) e {}. Retornou None
+[20260511 11: 58: 27] Função 'criar_cliente' executada com argumentos ([<__main__.PessoaFisica object at 0x000002D0EBEB9160>],) e {}. Retornou None
+[20260511 11: 59: 24] Função 'criar_cliente' executada com argumentos ([<__main__.PessoaFisica object at 0x00000260C96B9160>],) e {}. Retornou None
+[20260511 11: 59: 36] Função 'depositar' executada com argumentos ([<__main__.PessoaFisica object at 0x00000260C96B9160>],) e {}. Retornou None
+[20260511 11: 59: 43] Função 'sacar' executada com argumentos ([<__main__.PessoaFisica object at 0x00000260C96B9160>],) e {}. Retornou None
